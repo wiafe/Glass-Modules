@@ -1,0 +1,109 @@
+doctype html
+html(lang="en")
+  head
+    title email
+    meta(charset='UTF-8')
+    meta(content='', name='description')
+    meta(content='', name='author')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(content='3 days', name='revisit-after')
+
+    // build:css /styles/main.css
+    link(href='/styles/main.css', rel='stylesheet')
+    // endbuild
+    script(src='//use.typekit.net/bxc7xbp.js')
+    script 
+        try{Typekit.load();}catch(e){}
+
+  body(class=page)
+
+    block content
+
+    // Ethical Bride Form
+    div.popup-form
+        div.info.col-sm-7
+            h2.green Free T-Shirt
+            h2 Get One!
+
+            p.subscribe Subscribe to our wonderful and occasional emails and be automatically enter for a chance to win!
+            form
+                input(
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address...")
+                input(
+                    type=submit
+                    value="Sign me up!").btn
+
+            p.no-spam We will never spam you, unsubscribe anytime.
+        div.pic.col-sm-5.show-md
+            div.close
+
+    // Poll
+    div.poll
+        div.poll-image
+
+        div.close
+
+        h4 What's Your Opinion?
+        p Unborn children are fully human and deserve to be charished, protected and nurtured at all stages.
+
+        div.opinion
+            .btn-green Agree
+
+            .btn.disagree Disagree
+
+    // Survey
+    div.survey
+        div.poll-image
+
+        div.close
+
+        h4 What's Your Opinion?
+        p Unborn children are fully human and deserve to be charished, protected and nurtured at all stages.
+
+        div.tab-container.col-md-11.col-sm-11
+            span.active
+            span
+            span
+            span
+            span
+            span.counter 1/5
+
+        div.select-container.col-lg-12
+
+            div.select.col-md-9.col-sm-9.col-xs-9
+                h4 I completely agree
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+            div.select.col-md-9.col-sm-9.col-xs-9
+                h4 I somewhat agree
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+            div.select.col-md-9.col-sm-9.col-xs-9
+                h4 I completely disagree
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+            div.select.col-md-9.col-sm-9.col-xs-9
+                h4 I'm really not sure
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+        div.nav-btns.col-xs-3.col-sm-3.col-md-3
+            div.prev.col-xs-3.col-sm-3
+            div.next.col-xs-3.col-sm-3
+
+    // Floating Email
+    .email.clearfix
+        div.left
+            div.border
+                div.close
+            div.message Message goes here...
+
+        div.right
+            input(placeholder="Your email address..." name="email" type="email")
+            div.btn Subscribe
+
+    // Footer
+
+    // build:js /scripts/main.js
+    
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    
+    script(src='/scripts/main.js')
+    // endbuild

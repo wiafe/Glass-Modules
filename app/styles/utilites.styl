@@ -1,0 +1,147 @@
+/*
+ * Variables
+ * =========
+ */
+$gray  = #4F4F4F
+$light-gray = #E2E6E6
+$border    = #E5E5E5
+$green     = #59C77F
+$orange    = #EC831B
+$white = #fff
+$black = #000
+
+/*
+ * Helper Classes
+ * ==============
+ */
+.tr-up
+  text-transform uppercase
+span.info
+  border 1px solid
+  border-radius 50%
+  color #A6A6A6
+  cursor pointer
+  display inline-block
+  font-size 10px
+  font-weight 200
+  height 18px
+  line-height 18px
+  margin-left 5px
+  text-align center
+  width 18px
+
+/*
+ * Button Classes
+ * ==============
+ */
+.btn
+  border-radius 2px
+  cursor pointer
+  display inline-block
+  font-size 12px
+  font-weight 600
+  letter-spacing 0.075em
+  line-height 32px
+  padding 0 20px
+  @extend .tr-up
+  &.success
+    background-color green
+    color #FFF
+  &.outline
+    border 1px solid #A9B1BE
+    color #A9B1BE
+.btn-green
+  border-radius 2px
+  cursor pointer
+  display inline-block
+  font-size 12px
+  font-weight 600
+  letter-spacing 0.075em
+  line-height 32px
+  padding 0 20px
+  background-color $green
+  color #fff
+  @extend .tr-up
+  &.success
+    background-color green
+    color #FFF
+  &.outline
+    border 1px solid #A9B1BE
+    color #A9B1BE   
+/*
+ * Grid
+ * ====
+ */
+$xs = 576px
+$sm = 768px
+$md = 992px
+$lg = 1200px
+
+.grid-container 
+  width 100%
+  max-width 1200px
+  margin 0 auto
+
+.grid-container * 
+  box-sizing: border-box
+
+.clearfix
+  clearfix()
+
+.row
+  list-style none
+  margin 0 -15px
+  clearfix()
+    
+.col
+  float left
+  position relative
+  padding 0 15px 15px
+  img
+    max-width 100%
+    height auto
+    
+grid(class = 'xs', columns = 12)
+  for colCount in (1 .. columns)
+    percentWidth = (1% * ((colCount / columns) * 100))
+    .col-{class}-{colCount}
+      width percentWidth
+
+/* Base Grid */
+grid()
+
+/* Extra Small Size */
+@media (min-width: $xs)
+  grid('sm')
+
+/* Medium Size */
+@media (min-width: $sm)
+  grid('md')
+
+/* Large Size */
+@media (min-width: $md)
+  grid('lg')
+
+/*
+ * Helpers
+ * =======
+ */
+.show-sm
+  display none
+.show-md
+  display block
+@media (max-width: $sm)
+  .show-sm
+    display block
+  .show-md
+    display none
+    color #FFFFFF
+
+.close
+  background-image url(../images/close@2x.png)
+  background-repeat no-repeat
+  background-position center
+  background-size contain
+  position relative
+  padding 10px
+  cursor pointer

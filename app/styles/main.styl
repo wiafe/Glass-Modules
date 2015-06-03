@@ -1,0 +1,329 @@
+@import 'utilites'
+
+body
+	background-color #95a5a6
+	font-family "Proxima Nova", sans-serif
+
+	.popup-form
+		max-width 838px
+		height 385px
+		background-color #fff
+		margin 0 auto
+		display flex
+		border-radius 4px
+		box-shadow: 1px 2px 7px #000;
+		
+		
+		.info
+			padding 41px 50px 0px
+			h2
+				font-weight bold
+				font-size 51.58px
+				text-transform uppercase
+				margin 0
+				line-height 50px
+			
+			.green
+				color #6fa338
+				
+			.subscribe
+				opacity .7
+				font-size 15px
+			.no-spam
+				font-size 10.14px
+				opacity .5
+				margin-top 24px
+			form
+				display flex
+		
+				input[type=email]
+					padding 20px 25px
+					font-size 18px
+					border none
+					border 1px solid #e1e1e1
+					border-radius 3px
+					margin-right 10px
+				.btn
+					border none
+					color #fff
+					background-color #59c77f
+					text-align center
+					letter-spacing 3px
+					border-radius 3px
+					
+		@media (max-width: $md)
+			height 100%
+		@media (max-width: $sm)
+			text-align center
+			.info
+				max-width 100%
+				margin 0 auto
+				h2
+					font-size 33px
+					line-height 40px
+				form
+					display block
+					input[type=email]
+						width 100%
+						padding 10px 5px
+						font-size 12px
+						
+						
+					input.btn
+						width 100%
+						margin-top 10px
+						padding 0 6px
+					
+			
+		.pic
+			background-image url(../images/popup-pic@2x.png)
+			background-repeat no-repeat
+			background-size contain
+			background-position left center
+		
+			
+	.poll
+		max-width 578px
+		height 346px
+		margin 30px auto
+		background-color #fff
+		border-radius 4px
+		text-align center
+		box-shadow: 1px 2px 7px #000;
+		
+		@media (max-width: $xs)
+			height 500px
+	
+		
+		.poll-image
+			background-image url(../images/poll-image@2x.png)
+			background-repeat no-repeat
+			background-position center
+			background-size contain
+			position relative
+			padding 20px
+			top 47px
+			
+		.close
+			margin-left 530px
+			margin-top -33px
+			
+			@media (max-width: $xs)
+				display none
+			
+		h4
+			font-size 18px
+			letter-spacing 5px
+			text-transform uppercase
+			margin-top 80px
+		p
+			font-size 21px
+			font-weight 100
+			max-width 460px
+			margin 0 auto
+			color $gray
+			opacity 0.6
+		.opinion
+			margin-top 30px
+			.btn-green
+				padding 11px 33px
+				font-weight 700
+				letter-spacing 2px
+			.disagree
+				border 1px solid $gray
+				padding 10px 20px
+				margin-left 20px
+				color $gray
+				font-weight 700
+				letter-spacing 2px
+				@media (max-width: $xs)
+					margin-left 0
+					margin-top 15px
+					
+	.survey
+		max-width 638px
+		height 636px
+		margin 30px auto
+		background-color #fff
+		border-radius 4px
+		text-align center
+		box-shadow: 1px 2px 7px #000;
+		@media (max-width: $xs)
+			height 100%
+		@media (max-width: 400px)
+			height 100%
+		
+		
+		.poll-image
+			background-image url(../images/poll-image@2x.png)
+			background-repeat no-repeat
+			background-position center
+			background-size contain
+			position relative
+			padding 20px
+			top 47px
+			
+		.close
+			margin-left 595px
+			margin-top -33px
+			
+			@media (max-width: $sm)
+				margin-left 545px
+			@media (max-width: $xs)
+				right 12px
+				margin-left 0
+				position absolute
+				
+			
+		h4
+			font-size 18px
+			letter-spacing 5px
+			text-transform uppercase
+			margin-top 80px
+		p
+			font-size 21px
+			font-weight 100
+			max-width 460px
+			margin 0 auto
+			color $gray
+			opacity 0.6
+			padding 5px
+			
+		.tab-container
+			margin 20px auto 0
+			span
+				width 15.37%
+				height 10px
+				background-color $light-gray 
+				display inline-block
+				margin 1px
+				
+			.active
+				background-color $green
+			.counter
+				background-color #fff
+				text-align right
+				color $light-gray
+				width 7%
+		
+		.select-container
+			margin-top 18px
+				
+			.select
+				border 1px solid $light-gray
+				color $light-gray
+				text-align left
+				padding 11px 0px 10px 21px
+				margin 0 auto
+				margin-top 17px
+				h4
+					font-size 18px
+					margin-top 0
+					margin-bottom 0
+					@media (max-width: $sm)
+						font-size 15px
+					@media (max-width: $xs)
+						font-size 12px
+				p
+					font-size 12px
+					margin 0
+					padding 0
+				&:hover
+					cursor pointer
+					
+			.selected
+				background-color #f2f2f2
+				border-color transparent
+				cursor pointer
+				h4
+					color $green
+					margin-left 50px
+				p
+					margin-left 50px
+				&:before
+					content url(../images/checked@2x.png)
+					position absolute
+					width 0
+					height 0
+					margin-top 3px
+					
+		
+		.nav-btns
+			display flex
+			margin 20px auto 0 
+			.prev
+				background-image url(../images/prev@2x.png)
+				background-position center
+				background-size contain
+				background-repeat no-repeat
+				position relative
+				padding 20px
+				cursor pointer
+				
+			.next
+				background-image url(../images/next@2x.png)
+				background-position center
+				background-size contain
+				background-repeat no-repeat
+				position relative
+				padding 20px
+				cursor pointer
+			
+
+	.email
+		position relative
+		bottom 0px
+		height 51px
+		width 100%
+		background-color #eb593c
+		left 0px
+		box-shadow 1px 2px 6px
+		@media (max-width: $xs)
+			height 91px
+			display none
+		
+		.left
+			float left
+			display flex
+			margin-top 14px
+			margin-left 46px
+			.border
+				height 20px
+				width 20px
+				border 2px solid black
+				border-radius 50%
+				opacity 0.3
+				margin-right 15px
+				
+				.close
+					padding 5px
+					top 5px
+
+					
+			.message
+				color #fff
+				font-weight 600
+				margin-top 3px
+				
+					
+		.right
+			float right
+			margin-top 10px
+			margin-right 46px
+			
+			input
+				padding 9.3px
+				margin-right 5px
+				outline none
+				border none
+				
+				&::-webkit-input-placeholder
+					color #000
+				&::-moz-input-placeholder
+					color #000
+				&::-ms-input-placeholder
+					color #000
+			.btn
+				background-color #2b3237
+				border-radius 0px
+				color #fff
