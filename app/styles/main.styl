@@ -12,6 +12,7 @@ body
 		display flex
 		border-radius 4px
 		box-shadow: 1px 2px 7px #000;
+		display none // Hidden
 		
 		
 		.info
@@ -80,6 +81,15 @@ body
 			background-repeat no-repeat
 			background-size contain
 			background-position left center
+			
+		.close
+			margin-left -85px
+			margin-right 10px
+			margin-bottom 280px
+			@media (max-width: $sm)
+				margin-left 0px
+				margin-right 9px
+				margin-bottom 280px
 		
 			
 	.poll
@@ -90,6 +100,7 @@ body
 		border-radius 4px
 		text-align center
 		box-shadow: 1px 2px 7px #000;
+		display none // Hidden
 		
 		@media (max-width: $xs)
 			height 500px
@@ -108,8 +119,8 @@ body
 			margin-left 530px
 			margin-top -33px
 			
-			@media (max-width: $xs)
-				display none
+			@media (max-width: $ms)
+				margin-left 520px
 			
 		h4
 			font-size 18px
@@ -148,10 +159,13 @@ body
 		border-radius 4px
 		text-align center
 		box-shadow: 1px 2px 7px #000;
+		display none // Hidden
 		@media (max-width: $xs)
 			height 100%
+			display none // Hidden
 		@media (max-width: 400px)
 			height 100%
+			display none // Hidden
 		
 		
 		.poll-image
@@ -268,7 +282,107 @@ body
 				position relative
 				padding 20px
 				cursor pointer
+				
+	.petition
+		background-color #fff
+		max-width 598px
+		height 100%
+		margin 33px auto
+		border-radius 4px
+		
+		.close-white
+			padding 15px
+			right 9px
+			top 0px
+		
+		.petition-image
+			background-image url(../images/petition-image@2x.png)
+			background-repeat no-repeat
+			background-position center
+			background-size cover
+			padding-top 80px
+			color $white
+			margin-bottom -25px
 			
+			.petition-icon
+				background-image url(../images/petition-icon@2x.png)
+				background-repeat no-repeat
+				background-position center
+				background-size contain
+				padding 15px
+				
+			h4
+				text-align center
+				font-size 24px
+				letter-spacing 5px
+				text-transform uppercase
+				font-weight bold
+				margin-top 22px
+				
+			.signatures
+				display flex
+				padding 0 12px
+				
+				.left
+					span
+						font-weight normal
+					margin 0 0 5px
+				
+				.right
+					text-align right
+					b
+						margin-left 6px
+					margin 0 0 5px
+				
+		.tab-container
+			margin 20px auto 0
+			span
+				width 25%
+				height 10px
+				background-color $light-gray 
+				display inline-block
+				
+			.active
+				background-color $green
+		.blurb
+			padding 38px
+			h4
+				font-size 24px
+				margin 0
+				letter-spacing 2px
+			h5
+				font-size 16px
+				margin 0
+				margin-bottom 4px
+				text-transform uppercase
+				letter-spacing 2px
+			p
+				color $gray
+				margin 0
+				font-size 14px
+				font-weight lighter
+			.petition-title
+				margin-top -15px
+				margin-bottom 20px
+
+		.sign
+			padding-left 38px
+			margin-bottom 40px
+			.btn-green
+				font-size 18px
+				text-align center
+				padding 9px 18px
+				&:hover
+					opacity .7
+			.learn
+				border-bottom 1px solid $gray
+				color $gray
+				font-weight lighter
+				margin-left 23px
+				
+				@media (max-width: 383px)
+					margin-left 0
+					margin-top 10px
 
 	.email
 		position relative
@@ -278,6 +392,7 @@ body
 		background-color #eb593c
 		left 0px
 		box-shadow 1px 2px 6px
+		display none // Hidden
 		@media (max-width: $xs)
 			height 91px
 			display none

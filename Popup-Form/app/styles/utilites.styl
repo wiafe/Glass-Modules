@@ -3,12 +3,10 @@
  * =========
  */
 $gray  = #4F4F4F
-$light-gray = #E2E6E6
 $border    = #E5E5E5
-$green     = #59C77F 
+$green     = #59C77F
 $orange    = #EC831B
-$white = #fff
-$black = #000
+
 
 /*
  * Helper Classes
@@ -50,40 +48,14 @@ span.info
   &.outline
     border 1px solid #A9B1BE
     color #A9B1BE
-.btn-green
-  border-radius 2px
-  cursor pointer
-  display inline-block
-  font-size 12px
-  font-weight 600
-  letter-spacing 0.075em
-  line-height 32px
-  padding 0 20px
-  background-color $green
-  color #fff
-  @extend .tr-up
-  &.success
-    background-color green
-    color #FFF
-  &.outline
-    border 1px solid #A9B1BE
-    color #A9B1BE   
+    
 /*
  * Grid
  * ====
  */
-$xs = 576px
 $sm = 768px
 $md = 992px
 $lg = 1200px
-
-.grid-container 
-  width 100%
-  max-width 1200px
-  margin 0 auto
-
-.grid-container * 
-  box-sizing: border-box
 
 .clearfix
   clearfix()
@@ -101,7 +73,7 @@ $lg = 1200px
     max-width 100%
     height auto
     
-grid(class = 'xs', columns = 12)
+grid(class = 'sm', columns = 12)
   for colCount in (1 .. columns)
     percentWidth = (1% * ((colCount / columns) * 100))
     .col-{class}-{colCount}
@@ -109,10 +81,6 @@ grid(class = 'xs', columns = 12)
 
 /* Base Grid */
 grid()
-
-/* Extra Small Size */
-@media (min-width: $xs)
-  grid('sm')
 
 /* Medium Size */
 @media (min-width: $sm)
@@ -136,24 +104,3 @@ grid()
   .show-md
     display none
     color #FFFFFF
-    
-a
-  text-decoration none
-  color $black
-
-.close
-  background-image url(../images/close@2x.png)
-  background-repeat no-repeat
-  background-position center
-  background-size contain
-  position relative
-  padding 10px
-  cursor pointer
-.close-white
-  background-image url(../images/close-white@2x.png)
-  background-repeat no-repeat
-  background-position center
-  background-size contain
-  position absolute
-  padding 10px
-  cursor pointer
